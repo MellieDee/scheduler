@@ -2,6 +2,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #2D2432;
+  color: #F3F8FA;
+}
+
+h1, p {
+  color: #F3F8FA;
 }
 
 textarea{
@@ -18,7 +24,7 @@ textarea{
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid #5FB9B0;
 }
 
 .description{
@@ -33,7 +39,9 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  /* border-top: 1px solid #5FB9B0;
+  border-bottom: 1px solid #5FB9B0; */
+  margin: 0 4em;
 }
 
 .hour {

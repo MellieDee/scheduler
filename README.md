@@ -27,9 +27,38 @@ Link to the quiz here *[Work Day Scheduler](https://melliedee.github.io/schedule
 ***
 - HTML
 - CSS
--  XXXX date and time library 
+- JS
+- Luxon library for dealing with dates and times in JavaScript
+
 
 
 ### URLs I found helpful
 ***
+
+https://github.com/lbmoody/simple-day-planner
+
+https://github.com/gabepettus/DayPlanner
+https://github.com/Giselesoubeiga/Day-Planner/blob/master/script.js
+
+https://colorhunt.co/palette/2b1f31413d655fb9b0bef992
+https://colorhunt.co/palette/151515301b3f3c415cb4a5a5
+
+**
+https://www.geeksforgeeks.org/how-to-add-and-remove-multiple-classes-in-jquery/
+
+**https://stackoverflow.com/questions/6205258/jquery-dynamically-create-button-and-attach-event-handler
+
+https://stackoverflow.com/questions/40394282/how-to-format-custom-time-in-moment-js
+
+https://moment.github.io/luxon/#/
+
+https://www.codegrepper.com/code-examples/javascript/luxon+current+date+only
+
+https://github.com/moment/luxon/issues/313
+
+https://stackoverflow.com/questions/64064891/how-to-format-a-date-with-luxon
+
+
+
+
 
