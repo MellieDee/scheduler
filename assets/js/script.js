@@ -1,88 +1,82 @@
 
-// // /***    VARIABLES    ***/
-let plannerContainer = $(".container")
+// // // /***    VARIABLES    ***/
+plannerContainer = $(".container")
 
 
-//  /** DISPLAY CURRENT DAY ***/
+
+// //  /** DISPLAY CURRENT DAY & Time ***/
 let currentDayEl = document.querySelector("#currentDay");
-currentDayEl.textContent = (moment().format('MMMM Do YYYY, h:mm:ss a'));
-
- console.log(moment().toDate());
-
+currentDayEl.textContent = (moment().format('MMMM Do YYYY, h:mm A'));
+console.log(moment().toDate());
 
 
 // /***   FUNCTIONS START   ****/
+function plannerTime() {
+ time = moment([i], ["HH"]).format("LT");
+  console.log(time);
+  return time
+ };
+
+// plannerTime();
+
+
+
 //get value of textarea
 //function eventInput() {
-
-// /**
 
 // convert to time after?
 
 
 // 2)create rows for day 11 8-6pm */
+// want to compare if hours 8-6p are equal or greater
 
-//The getHours() method returns the hour for the specified date, according to local time.
-//new Date is current date - not sure want dependent on that for setting hrs 8-6pm? but do want to compare if hours 8-6p are equal or greater
+//turn  this into a F to call when comparing??
 
 
-let hour = new Date().getHours();
-for (var i = 9.00; i <= 18.00; i++) {
+
+
+//  let events = []
+
+// //save events in array
+// events.push ({
+//   text: "test",
+// });console.log(events);
+
+/***   CREATE ELEMENTS THAT MAKE THE PLANNER ROWS ****/
+let rowEl = "";
+
+for (var i = 8.00; i <= 18.00; i++) {
   console.log(i)
 
-let time = moment([i], ["HH"]).format("LT");
-    console.log(time);
+  //create planner rows & append to the main div container: create the planner time, entry and save columns
+  rowEl = $(`<div class="row"></div>`);
+  plannerContainer.append(rowEl);
+
+  hourEl = $(`<div class = "col-2 hour">${plannerTime(i)}</div>`)
+  eventTextArea = $("<textarea>").addClass("col-8 form-control textarea description bg-transparent");
+  $("textarea").focus(function() {
+    $("textarea").css("color", "white"); 
+  });
+  saveBtn = $(`<button class="col-2 saveBtn">Save</button>`).click(function () { console.log("place holder for button action function"); });
+
+    //append columns to the row container
+    rowEl.append(hourEl, eventTextArea, saveBtn);
+  //append the textarea to the form 
+  // eventForm.append(eventTextArea);
+
 
 };
-//keeps adding dependent on current time how get to stop??
-  function eventTime() {
-    let time = moment([i], ["HH"]).format("LT");
-    console.log(time);
-    return(time);
-  }
-  eventTime();
- console.log(hour);
+
+// createPlanner();
+
+//need to capture data to save to local storage need to associate array id and hour
+//need to display row on screen/page
 
 
- /***   CREATE ELEMENTS THAT MAKE THE HOUR/EVENT ROW ****/
-
- //need to capture data to save to local storage need to associate array id and hour
-
- //need to display row on screen/page
-
-
- let events = []
-
-//save events in array
-events.push ({
-  text: "test",
-  // hour: eventHour
-});console.log(events);
-
-//create the row & append to the div container
-function createPlanner () {
-let rowEl = $("div").addClass("row container");
-plannerContainer.append(rowEl);
-
-//create the hour, entry and save columns
-let hourEl = $("<div>").addClass("col-2 hour").text("time holder");
-let eventForm = $("<form>").addClass("col-8 form-control description bg-transparent");
-let eventP = $("<input>").addClass("textarea");
-let saveBtn = $(`<button class="col-2 saveBtn">Save</button>`).click(function() {console.log("place holder for button action function"); });
-
-eventForm.append(eventP);
-
-//append columns to the row container
-rowEl.append(hourEl, eventForm, saveBtn);
-};
-createPlanner();
-
-//enter event
-function envverEvent() {
-$(".textarea").trigger("focus");
-
-
-}
+//****   capture event data *****//
+// function envverEvent() {
+// $(".textarea").trigger("focus");
+// }
 
 /***pseudo code continued  ***/
 // // // 3) create columns for rows (2?)
@@ -105,7 +99,7 @@ $(".textarea").trigger("focus");
 // $(".saveBtn").click(function() {
 //   // get form values
 //   var eventText = $("eventP text").val();
-//   var eevntDate = $(TBD?).val();
+//   var eventDate = $(TBD?).val();
 
 //   if (eventP.text.val()  {
 //     createEvent(eventText, hourEl.val??);
@@ -199,59 +193,24 @@ $(".textarea").trigger("focus");
 
 
 
+/******     time  comparison for background color:  *****/
+// if (time < hour){
+//   console.log("event is past");
+// } else if (time > hour) {
+//   console.log("event is coming up");
+// } else {
+//   console.log("happening now")
+// }
 
 
 
+///****** NOT SURE IF NEEDED **** */
 
+// let hour = new Date().getHours();
+//did use this cuz need to insert a funciton for the text...
+// let hourEl = $("<div>").addClass("col-2 hour").text("time holder");
 
-
-
-
-
-
-
-// let hr8 = "08:00:00";
-// let hr8Form = moment(hr8,"HH:mm:ss").format("LT");
-// console.log(hr8Form);
-
-// let hr9 = "09:00:00";
-// let hr9Form = moment(hr9,"HH:mm:ss").format("LT");
-// console.log(hr9Form);
-
-// let hr10 = "10:00:00";
-// let hr10Form = moment(hr10,"HH:mm:ss").format("LT");
-// console.log(hr10Form);
-
-// let hr11 = "11:00:00";
-// let hr11Form = moment(hr11,"HH:mm:ss").format("LT");
-// console.log(hr11Form);
-
-// let hr12 = "12:00:00";
-// let hr12Form = moment(hr12,"HH:mm:ss").format("LT");
-// console.log(hr12Form);
-
-// let hr1 = "13:00:00";
-// let hr1Form = moment(hr1,"HH:mm:ss").format("LT");
-// console.log(hr1Form);
-
-// let hr2 = "14:00:00";
-// let hr2Form = moment(hr2,"HH:mm:ss").format("LT");
-// console.log(hr2Form);
-
-// let hr3 = "15:00:00";
-// let hr3Form = moment(hr3,"HH:mm:ss").format("LT");
-// console.log(hr3Form);
-
-// let hr4 = "16:00:00";
-// let hr4Form = moment(hr4,"HH:mm:ss").format("LT");
-// console.log(hr4Form);
-
-// let hr5 = "17:00:00";
-// let hr5Form = moment(hr5,"HH:mm:ss").format("LT");
-// console.log(hr5Form);
-
-// let hr6 = "18:00:00";
-// let hr6Form = moment(hr6,"HH:mm:ss").format("LT");
-// console.log(hr6Form);
-
+// let vs nothing - because jquery shorthand?
+//   // let rowEl = $("div").addClass("row");
+//   // plannerContainer.append(rowEl);
 

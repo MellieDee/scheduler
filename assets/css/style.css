@@ -14,7 +14,7 @@ textarea{
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  /* color: #F3F8FA; */
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -30,6 +30,7 @@ textarea{
 .description{
   white-space: pre-wrap;
   height: 78px;
+  color: white;
 
 }
 
@@ -41,8 +42,6 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  /* border-top: 1px solid #5FB9B0;
-  border-bottom: 1px solid #5FB9B0; */
   margin: 0 4em;
 }
 
