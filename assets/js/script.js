@@ -46,6 +46,11 @@ let time = moment([i], ["HH"]).format("LT");
 
  /***   CREATE ELEMENTS THAT MAKE THE HOUR/EVENT ROW ****/
 
+ //need to capture data to save to local storage need to associate array id and hour
+
+ //need to display row on screen/page
+
+
  let events = []
 
 //save events in array
@@ -61,15 +66,23 @@ plannerContainer.append(rowEl);
 
 //create the hour, entry and save columns
 let hourEl = $("<div>").addClass("col-2 hour").text("time holder");
-let eventP = $("<p>").addClass("col-8 description textarea").text("test");
-
+let eventForm = $("<form>").addClass("col-8 form-control description bg-transparent");
+let eventP = $("<input>").addClass("textarea");
 let saveBtn = $(`<button class="col-2 saveBtn">Save</button>`).click(function() {console.log("place holder for button action function"); });
 
+eventForm.append(eventP);
+
 //append columns to the row container
-rowEl.append(hourEl, eventP, saveBtn);
+rowEl.append(hourEl, eventForm, saveBtn);
 };
 createPlanner();
 
+//enter event
+function envverEvent() {
+$(".textarea").trigger("focus");
+
+
+}
 
 /***pseudo code continued  ***/
 // // // 3) create columns for rows (2?)
