@@ -48,6 +48,14 @@ https://www.geeksforgeeks.org/how-to-add-and-remove-multiple-classes-in-jquery/
 
 **https://stackoverflow.com/questions/6205258/jquery-dynamically-create-button-and-attach-event-handler
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours
+
+https://stackoverflow.com/questions/26783080/convert-12-hour-am-pm-string-to-24-date-object-using-moment-js
+
+
+https://stackoverflow.com/questions/46141450/create-li-from-loop-through-array-and-display-to-html-as-a-list
+
+
 https://stackoverflow.com/questions/40394282/how-to-format-custom-time-in-moment-js
 
 https://moment.github.io/luxon/#/
