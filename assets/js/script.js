@@ -13,16 +13,14 @@ console.log(moment().toDate());
 // /***   FUNCTIONS START   ****/
 function plannerTime() {
   time = moment([i], ["HH"]).format("LT");
-  console.log(time);
+  // console.log(time);
   return time
 };
 
- saveBtnClick = $("saveBtn").click(function () {
-   console.log("place holder for button action function")
-  }); 
 
 
-  // });
+
+// });
 // function saveEvents() {
 //   // save button in was clicked
 //   $("saveBtn").click(function () {
@@ -60,24 +58,63 @@ for (var i = 8.00; i <= 18.00; i++) {
   plannerContainer.append(rowEl);
 
   hourEl = $(`<div class = "col-2 hour">${plannerTime(i)}</div>`)
-
   eventTextArea = $(`<textarea class="col-8 form-control textarea description bg-transparent" id="eventTextArea${i}"></textarea>`);
   console.log(eventTextArea);
-
   $("textarea").focus(function () {
     $("textarea").css("color", "white");
   });
 
-  //   saveBtn = $(`<button class="col-2 saveBtn">Save</button>`).click(function () { console.log("place holder for button action function"); 
-  // });
+  saveEventBtn = $(`<button class="col-2 saveBtn" id="saveBtn${i}">Save</button>`).click(function () { console.log("place holder for button action function") });
 
-  saveEventBtn = $(`<button class="col-2 saveBtn" id="saveBtn${i}">Save</button>`);
-  console.log(saveEventBtn);
 
   //append columns to the row container
   rowEl.append(hourEl, eventTextArea, saveEventBtn);
-};
+  // checkCurrentTime();
+}
+
+// $("saveEventBtn").click(function () {
+//   console.log("place holder for button action function")
+//  }); 
 // createPlanner();
+
+
+
+
+
+/*****    Check if  time slots === current time  ****/
+
+// // //   create array with hours in it
+// // //   in backgroud - loop through hours to test 
+// // //     test at interval? every hour? minute? Second?
+
+// // //   1) if equal, then bg: current: #BEF992
+// // //   2) else if before bg: Past: #E8DFDF or #EAE9E9
+// // //   3) else: if after bg: Future: 5FB9B0
+
+
+//To see if current time matches the time and event is scheduled
+function checkCurrentTime() {
+  //define current time
+  let hour = new Date().getHours();
+  //confirm current time format
+  console.log(hour);
+
+  //check each hour against current time
+  for (var x = 8; x <= 18; x++) {
+    console.log(x)
+    if (hour == x) {
+      console.log("happening Now");
+      // $("eventTextArea${i}").css("background", "#BEF992");
+    } else if (hour > x) {
+      console.log("already happened");
+
+    }
+    else {
+      console.log("event coming up");
+    }
+  }
+}
+// checkCurrentTime();
 
 /****  STILL TO DO  *****/
 
@@ -217,7 +254,7 @@ for (var i = 8.00; i <= 18.00; i++) {
 
 ///****** NOT SURE IF NEEDED **** */
 
-// let hour = new Date().getHours();
+
 //did use this cuz need to insert a funciton for the text...
 // let hourEl = $("<div>").addClass("col-2 hour").text("time holder");
 
