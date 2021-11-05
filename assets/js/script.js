@@ -12,27 +12,34 @@ console.log(moment().toDate());
 
 // /***   FUNCTIONS START   ****/
 function plannerTime() {
- time = moment([i], ["HH"]).format("LT");
+  time = moment([i], ["HH"]).format("LT");
   console.log(time);
   return time
- };
+};
 
+ saveBtnClick = $("saveBtn").click(function () {
+   console.log("place holder for button action function")
+  }); 
+
+
+  // });
+// function saveEvents() {
+//   // save button in was clicked
+//   $("saveBtn").click(function () {
+//     // let eventText = $("textarea").val();
+//     console.log("this button was clicked");
+//   });
+// };
+// saveEvents();
+
+
+// function saveEventData() {
+//   $("saveBtn").click(function () {
+//     // get textArea values
+//     console.log($("textarea").val());
+//   });
+// };
 // plannerTime();
-
-
-
-//get value of textarea
-//function eventInput() {
-
-// convert to time after?
-
-
-// 2)create rows for day 11 8-6pm */
-// want to compare if hours 8-6p are equal or greater
-
-//turn  this into a F to call when comparing??
-
-
 
 
 //  let events = []
@@ -53,61 +60,65 @@ for (var i = 8.00; i <= 18.00; i++) {
   plannerContainer.append(rowEl);
 
   hourEl = $(`<div class = "col-2 hour">${plannerTime(i)}</div>`)
-  eventTextArea = $("<textarea>").addClass("col-8 form-control textarea description bg-transparent");
-  $("textarea").focus(function() {
-    $("textarea").css("color", "white"); 
+
+  eventTextArea = $(`<textarea class="col-8 form-control textarea description bg-transparent" id="eventTextArea${i}"></textarea>`);
+  console.log(eventTextArea);
+
+  $("textarea").focus(function () {
+    $("textarea").css("color", "white");
   });
-  saveBtn = $(`<button class="col-2 saveBtn">Save</button>`).click(function () { console.log("place holder for button action function"); });
 
-    //append columns to the row container
-    rowEl.append(hourEl, eventTextArea, saveBtn);
-  //append the textarea to the form 
-  // eventForm.append(eventTextArea);
+  //   saveBtn = $(`<button class="col-2 saveBtn">Save</button>`).click(function () { console.log("place holder for button action function"); 
+  // });
 
+  saveEventBtn = $(`<button class="col-2 saveBtn" id="saveBtn${i}">Save</button>`);
+  console.log(saveEventBtn);
 
+  //append columns to the row container
+  rowEl.append(hourEl, eventTextArea, saveEventBtn);
 };
-
 // createPlanner();
 
-//need to capture data to save to local storage need to associate array id and hour
-//need to display row on screen/page
+/****  STILL TO DO  *****/
 
+//SAVE DATA:
+// 1) capture data to save to local storage need to associate array id and hour
+// 2) save to localStorage
+//3) recall from localStorage
 
-//****   capture event data *****//
-// function envverEvent() {
-// $(".textarea").trigger("focus");
-// }
+//COLOR CHANGE EVENT Backgrounds ****/
+//1) Compare hour at i with current time
+//2) set if within then
+//set if < and  > else if & else
 
-/***pseudo code continued  ***/
-// // // 3) create columns for rows (2?)
-// // //   A) create hour column:  
-// // //      put the time in the column
-// // //   B)create event form
-// // // // i) div to "hold" color
-// // //   ii) div to hold text area
-// // //   iii) save btn
-// // //       a)capture data from text area
-// // //       b) display on screen
+// var auditTask = function(taskEl) {
+//   // get date from task element
+//   var date = $(taskEl)
+//     .find("span")
+//     .text()
+//     .trim();
 
+//   // convert to moment object at 5:00pm
+//   var time = moment(date, "L").set("hour", 17);
 
-// // //       c) save to localStorage
+//   // remove any old classes from element
+//   $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
+
+//   // apply new class if task is near/over due date
+//   if (moment().isAfter(time)) {
+//     $(taskEl).addClass("list-group-item-danger");
+//   } else if (Math.abs(moment().diff(time, "days")) <= 2) {
+//     $(taskEl).addClass("list-group-item-warning");
+//   }
+// };
 
 
 //let events = []
 
-// save button in was clicked
-// $(".saveBtn").click(function() {
-//   // get form values
-//   var eventText = $("eventP text").val();
-//   var eventDate = $(TBD?).val();
-
-//   if (eventP.text.val()  {
-//     createEvent(eventText, hourEl.val??);
-
 
 //     // save in events in  array
 //    events.push({
-//       text: eventText,or eventP??
+//       text: eventText 
 //       hour: eventTime  hourEL?? hourEL text??
 //     });
 
@@ -213,4 +224,3 @@ for (var i = 8.00; i <= 18.00; i++) {
 // let vs nothing - because jquery shorthand?
 //   // let rowEl = $("div").addClass("row");
 //   // plannerContainer.append(rowEl);
-

@@ -48,6 +48,11 @@ https://www.geeksforgeeks.org/how-to-add-and-remove-multiple-classes-in-jquery/
 
 **https://stackoverflow.com/questions/6205258/jquery-dynamically-create-button-and-attach-event-handler
 
+https://pretagteam.com/question/how-can-we-dynamically-change-font-color-in-textarea-using-angularjqueryjavascript
+
+https://blog.jscrambler.com/a-momentjs-in-time#:~:text=To%20get%20the%20current%20date,in%20the%20current%20time%20zone.
+
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 https://stackoverflow.com/questions/26783080/convert-12-hour-am-pm-string-to-24-date-object-using-moment-js
