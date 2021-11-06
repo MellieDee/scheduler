@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* text-decoration: none; */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  background-color: #1B1729; 
+  color: #F3F8FA;
+}
+
+h1, p {
+  color: #F3F8FA;
+}
+header p {
+padding: 0.4em;
+}
+
+textarea{
+  background: transparent;
+  border: none;
+  resize: none;
+  /* color: #F3F8FA; */
+  border-left: 1px solid black;
+  padding: 8px;
+}
+
+
+.display-3 {
+  font-size: 2.5rem;
+  font-weight: 225;
+  line-height: 1.;
+}
+
+.lead {
+  font-size: 1.1em ;
+}
+
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 4px solid #5FB9B0;
+  padding-bottom: 1em;
+}
+
+.description{
+  white-space: pre-wrap;
+  height: 78px;
+  color: black;
+  /* font-size: 1.2em; */
+}
+
+.form-control {
+  font-size: 1.05em;
+  padding: 0.3em;
+}
+
+.time-block{
+  text-align: center;
+  border-radius: 10px;
+} 
+
+.row {
+  white-space: pre-wrap;
+  height: 50px;
+  margin: 0 1.3em;
+  border-top: 1px solid #F3F8FA;
+}
+
+.hour {
+  background-color: #D6E1E6;
+  color: #000000;
+  border-top: 1px solid #000000;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em 0;
+}
+
+.btnDiv {
+  background-color: #355aab;
+}
+
+.saveBtn {
+  /* border-left: 1px solid black; */
+  /* border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px; */
+  background-color: #355aab;
+  color: #D6E1E6;
+}
+
+.saveBtn:hover {
+  font-size: 30px;
+  transition: all;
+  background-color: #233A6D;
+  /* 1s linear;  */
+}
+
+
+#currentDay {
+  border: 0.3px solid #BEF992;
+  margin: 0 4em;
+}
+
+
+/*** MEDIA QUERIES START ***/
+
+/****  between 280px & 360px ******/
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  textarea {
+    font-size: 14px;
+  }
+  .jumbotron {
+    border-bottom: 5px solid #5FB9B0;
+
+  }
+
+  .lead {
+    font-size: 1.15em ;
+  }
+
+  .row {
+    height: 60px;
+    margin: 0 1.8em;
+  }
+  .hour, .form-control {
+    font-size: 1.2em;
+  }
+
+  .hour {
+    padding: 15px;
+  }
+}
+
+
+/****   576px and smaller ******/
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 20px;
+  }
+  textarea {
+    font-size: 16px;
+  }
+  .jumbotron {
+    border-bottom: 8px solid #5FB9B0;
+
+  }
+  .row {
+    height: 70px;
+  }
+  .hour, .form-control {
+    font-size: 0.9em;
+  }
+  .hour {
+    padding: 15px;
+  }
+}
+
+
+/*** MQ FOR SMALLER/MEDIUM SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 22px;
+  }
+  textarea {
+    font-size: 20px;
+  }
+  .display-3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .row {
+    height: 80px;
+  }
+}
+
