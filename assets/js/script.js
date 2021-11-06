@@ -2,13 +2,10 @@
 // // // /***    VARIABLES    ***/
 plannerContainer = $(".container")
 
-
-
 // //  /** DISPLAY CURRENT DAY & Time ***/
 let currentDayEl = document.querySelector("#currentDay");
 currentDayEl.textContent = (moment().format('MMMM Do YYYY, h:mm A'));
 console.log(moment().toDate());
-
 
 // /***   FUNCTIONS START   ****/
 function plannerTime() {
@@ -18,17 +15,8 @@ function plannerTime() {
 };
 
 
-//  let events = []
-
-// //save events in array
-// events.push ({
-//   text: "test",
-// });console.log(events);
-
-
 /***   CREATE ELEMENTS THAT MAKE THE PLANNER ROWS ****/
 let rowEl = "";
-
 for (var i = 8.00; i <= 18.00; i++) {
   // console.log(i)
 
@@ -36,17 +24,17 @@ for (var i = 8.00; i <= 18.00; i++) {
   rowEl = $(`<div class="row"></div>`);
   plannerContainer.append(rowEl);
 
-  //dynamically create hour box and text area field
+  //dynamically create hour box and text area field - insert plannerTime to convert to desired time format
   hourEl = $(`<div class = "col-2 hour" id="${i}">${plannerTime(i)}</div>`)
-  eventTextArea = $(`<textarea class="col-8 form-control textarea description bg-transparent" id="eventTextArea${i}"></textarea>`);
+  eventTextArea = $(`<textarea class="col-8 form-control textarea description" id="eventTextArea${i}"></textarea>`);
   // console.log(eventTextArea);
   $("textarea").focus(function () {
     $("textarea").css("color", "white");
   });
 
- //dynamically create Save Button add click listener to save events
+  //dynamically create Save Button add click listener to save events
   saveEventBtn = $(`<button class="col-2 saveBtn" id="saveBtn${i}">Save</button>`)
-  //includes click function to collect data &  save textarea input to localStorage
+    //includes click function to collect data &  save textarea input to localStorage
     .click(function () {
       let time = $(this).siblings().attr("id");
       let value = $(this).siblings(".description").val();
@@ -59,13 +47,9 @@ for (var i = 8.00; i <= 18.00; i++) {
   //append columns to the row container
   rowEl.append(hourEl, eventTextArea, saveEventBtn);
   // checkCurrentTime();
-
- 
-}
-
+};
 
 /*****    Check if  time slots === current time  ****/
-
 // // //   create array with hours in it
 // // //   in backgroud - loop through hours to test 
 // // //     test at interval? every hour? minute? Second?
@@ -78,26 +62,37 @@ for (var i = 8.00; i <= 18.00; i++) {
 //To see if current time matches the time and event is scheduled
 function checkCurrentTime() {
   //define current time
-  let hour = new Date().getHours();
+  let currentTime = new Date().getHours();
   //confirm current time format
-  console.log(hour);
+  console.log(currentTime);
+/*************************************************************/
+  // if the value of hourEl is ===  if value of hour.id >8
 
+
+
+
+
+
+
+  
   //check each hour against current time
-  for (var x = 8; x <= 18; x++) {
-    console.log(x)
-    if (hour == x) {
+  for (var i = 8; i <= 18; i++) {
+    console.log(i)
+    if (currentTime == i) {
       console.log("happening Now");
+      // $("eventTextArea${i}").css("background", "red");
+      // $("#eventTextArea${i}").css("background-color", "#BEF992")
       // $("eventTextArea${i}").css("background", "#BEF992");
-    } else if (hour > x) {
+    } else if (currentTime > i) {
       console.log("already happened");
-
+       $("#eventTextArea${i}").css("background-color", "#5FB9B0")
     }
     else {
       console.log("event coming up");
     }
   }
 }
-// checkCurrentTime();
+ checkCurrentTime();
 
 
 //LOAD SAVED EVENTS  
@@ -145,8 +140,14 @@ let event18 = localStorage.getItem("18");
 // console.log(event18);
 $("#eventTextArea18").val(event18);
 
-// // // load events for the first time
-// // loadEvents();
+//load events for the first time
+// loadEvents();
+// add to an array or loop??
+//  let events = []
+// save events in array
+// events.push ({
+//   text: "test",
+// });console.log(events);
 
 
 
