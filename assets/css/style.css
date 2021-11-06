@@ -5,12 +5,11 @@
   /* text-decoration: none; */
 }
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   line-height: 1;
-  background-color: #2D2432;
+  background-color: #1B1729; 
   color: #F3F8FA;
 }
 
@@ -69,7 +68,7 @@ textarea{
 }
 
 .hour {
-  background-color: #F3F8FA;
+  background-color: #D6E1E6;
   color: #000000;
   border-top: 1px solid #000000;
   font-size: 1.2em;
@@ -91,13 +90,13 @@ textarea{
 .saveBtn:hover {
   font-size: 30px;
   transition: all;
+  background-color: #233A6D;
   /* 1s linear;  */
 }
 
 
 
-/*** MEDIA QUERIES  ***/
-
+/*** MEDIA QUERIES START ***/
 
 /****   576px and smaller ******/
 @media screen and (min-width: 576px) {
@@ -123,7 +122,7 @@ textarea{
 }
 
 
-/*** MQ FOR SMALLER SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
+/*** MQ FOR SMALLER/MEDIUM SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
 @media screen and (min-width: 640px) {
   body {
     font-size: 22px;
