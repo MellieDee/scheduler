@@ -25,15 +25,15 @@ for (var i = 8.00; i <= 18.00; i++) {
   plannerContainer.append(rowEl);
 
   //***HOUR DIV & TEXTAREA: dynamically create hour box and text area field - insert plannerTime to convert to desired time format
-  hourEl = $(`<div class = "col-2 hour" id="${i}">${plannerTime(i)}</div>`)
-  eventTextArea = $(`<textarea class="col-8 form-control textarea description" id="eventTextArea${i}"></textarea>`);
+  hourEl = $(`<div class = "col-3 hour" id="${i}">${plannerTime(i)}</div>`)
+  eventTextArea = $(`<textarea class="col-6 form-control textarea description" id="eventTextArea${i}"></textarea>`);
   // console.log(eventTextArea);
   $("textarea").focus(function () {
     $("textarea").css("color", "black");
   });
 
   //*** SAVE BUTTON: dynamically create Save Button add click listener to save events
-  saveEventBtn = $(`<button class="col-2 saveBtn material-icons" id="saveBtn${i}"><span class="material-icons-outlined">
+  saveEventBtn = $(`<button class="col-3 saveBtn material-icons" id="saveBtn${i}"><span class="material-icons-outlined">
   save
   </span></button>`)
     //includes click function to collect data &  save textarea input to localStorage

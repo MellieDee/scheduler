@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1;
   background-color: #2D2432;
   color: #F3F8FA;
@@ -22,7 +22,6 @@ textarea{
   background: transparent;
   border: none;
   resize: none;
-  font-size: 3em;
   /* color: #F3F8FA; */
   border-left: 1px solid black;
   padding: 10px;
@@ -51,7 +50,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 60px;
   margin: 0 4em;
   border-top: 1px solid #F3F8FA;
 }
@@ -64,8 +63,11 @@ textarea{
   padding-top: 1.5em;
 }
 
+.btnDiv {
+  background-color: #355aab;
+}
 .saveBtn {
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   /* border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; */
   background-color: #355aab;
@@ -78,9 +80,32 @@ textarea{
   /* 1s linear;  */
 }
 
+
+
+/*** MEDIA QUERIES  ***/
+
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 20px;
+  }
+  textarea {
+    font-size: 16px;
+  }
+ .row {
+   height: 70px;
+ }
+
+  
+}
 @media screen and (min-width: 640px) {
   body {
     font-size: 22px;
+  }
+  textarea {
+    font-size: 20px;
+  }
+  .row {
+    height: 80px;
   }
 }
 
