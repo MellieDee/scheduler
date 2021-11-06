@@ -23,24 +23,26 @@ textarea{
   resize: none;
   /* color: #F3F8FA; */
   border-left: 1px solid black;
-  padding: 10px;
+  padding: 8px;
 }
 
+
 .display-3 {
-  font-size: 3rem;
-  font-weight: 250;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  font-weight: 225;
+  line-height: 1.;
 }
 
 .lead {
-  font-size: 1.15em ;
+  font-size: 1.1em ;
 }
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 5px solid #5FB9B0;
+  border-bottom: 4px solid #5FB9B0;
   padding-bottom: 1em;
 }
 
@@ -52,7 +54,8 @@ textarea{
 }
 
 .form-control {
-  font-size: 1.1em;
+  font-size: 1.05em;
+  padding: 0.3em;
 }
 
 .time-block{
@@ -62,8 +65,8 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 70px;
-  margin: 0 4em;
+  height: 50px;
+  margin: 0 1.3em;
   border-top: 1px solid #F3F8FA;
 }
 
@@ -71,14 +74,15 @@ textarea{
   background-color: #D6E1E6;
   color: #000000;
   border-top: 1px solid #000000;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
-  padding-top: 1.5em;
+  padding: 0.8em 0;
 }
 
 .btnDiv {
   background-color: #355aab;
 }
+
 .saveBtn {
   /* border-left: 1px solid black; */
   /* border-top-right-radius: 15px;
@@ -97,6 +101,37 @@ textarea{
 
 
 /*** MEDIA QUERIES START ***/
+
+/****  between 280px & 360px ******/
+@media screen and (min-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  textarea {
+    font-size: 14px;
+  }
+  .jumbotron {
+    border-bottom: 5px solid #5FB9B0;
+
+  }
+
+  .lead {
+    font-size: 1.15em ;
+  }
+
+  .row {
+    height: 60px;
+    margin: 0 1.8em;
+  }
+  .hour, .form-control {
+    font-size: 1.2em;
+  }
+
+  .hour {
+    padding: 15px;
+  }
+}
+
 
 /****   576px and smaller ******/
 @media screen and (min-width: 576px) {
