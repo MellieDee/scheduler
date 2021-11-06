@@ -20,19 +20,18 @@ function plannerTime() {
 
 
 
-// });
-// function saveEvents() {
-//   // save button in was clicked
-//   $("saveBtn").click(function () {
-//     // let eventText = $("textarea").val();
-//     console.log("this button was clicked");
-//   });
-// };
-// saveEvents();
+
+
+// $(".saveBtn").on("click", function (){
+// let time = $(this).siblings().attr("id");
+// console.log(time);
+// console.log("random");
+//   localStorage.setItem(time, value);
+// })
 
 
 // function saveEventData() {
-//   $("saveBtn").click(function () {
+//   $("saveBtn[i]").click(function () {
 //     // get textArea values
 //     console.log($("textarea").val());
 //   });
@@ -51,26 +50,36 @@ function plannerTime() {
 let rowEl = "";
 
 for (var i = 8.00; i <= 18.00; i++) {
-  console.log(i)
+  // console.log(i)
 
   //create planner rows & append to the main div container: create the planner time, entry and save columns
   rowEl = $(`<div class="row"></div>`);
   plannerContainer.append(rowEl);
 
-  hourEl = $(`<div class = "col-2 hour">${plannerTime(i)}</div>`)
+  hourEl = $(`<div class = "col-2 hour" id="${i}">${plannerTime(i)}</div>`)
   eventTextArea = $(`<textarea class="col-8 form-control textarea description bg-transparent" id="eventTextArea${i}"></textarea>`);
-  console.log(eventTextArea);
+  // console.log(eventTextArea);
   $("textarea").focus(function () {
     $("textarea").css("color", "white");
   });
 
-  saveEventBtn = $(`<button class="col-2 saveBtn" id="saveBtn${i}">Save</button>`).click(function () { console.log("place holder for button action function") });
+  saveEventBtn = $(`<button class="col-2 saveBtn" id="saveBtn${i}">Save</button>`)
+ .click(function () { 
+   let time = $(this).siblings().attr("id");
+   let value = $(this).siblings(".description").val();
+
+console.log(time);
+console.log("random");
+  localStorage.setItem(time, value);});
 
 
   //append columns to the row container
   rowEl.append(hourEl, eventTextArea, saveEventBtn);
   // checkCurrentTime();
 }
+
+//getitems for each ohour
+
 
 // $("saveEventBtn").click(function () {
 //   console.log("place holder for button action function")
