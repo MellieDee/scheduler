@@ -1,6 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* text-decoration: none; */
+}
+
+
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
+  font-size: 18px;
   line-height: 1;
   background-color: #2D2432;
   color: #F3F8FA;
@@ -14,6 +22,7 @@ textarea{
   background: transparent;
   border: none;
   resize: none;
+  font-size: 3em;
   /* color: #F3F8FA; */
   border-left: 1px solid black;
   padding: 10px;
@@ -25,15 +34,14 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid #5FB9B0;
+  padding-bottom: 1em;
 }
 
 .description{
   white-space: pre-wrap;
   height: 78px;
   color: black;
-  font-size: 1.2em;
-
-
+  /* font-size: 1.2em; */
 }
 
 .time-block{
@@ -45,40 +53,50 @@ textarea{
   white-space: pre-wrap;
   height: 80px;
   margin: 0 4em;
+  border-top: 1px solid #F3F8FA;
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #F3F8FA;
   color: #000000;
   border-top: 1px solid #000000;
   text-align: center;
   padding-top: 1.5em;
 }
 
-.past {
-  background-color: #d3d3d3;
-  color: black;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
 .saveBtn {
   border-left: 1px solid black;
   /* border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; */
-  background-color: #06AED5;
+  background-color: #355aab;
   color: white;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.saveBtn:hover {
+  font-size: 30px;
+  transition: all;
+  /* 1s linear;  */
 }
+
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+/*** reference code not used ***
+ border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px; #06AED5
+
+.past {
+  background-color: #d3d3d3;
+  color: black;
+}
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+.future {
+  background-color: #77dd77;
+  color: white;
+} ***/
