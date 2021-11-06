@@ -31,6 +31,13 @@ Link to the quiz here *[Work Day Scheduler](https://melliedee.github.io/schedule
 - moment.js library for dealing with dates and times in JavaScript
 - template literals - note - potentially not supported in Internet Explorer
 
+### Icon Licensing
+***
+https://developers.google.com/fonts/docs/material_icons
+
+"...We have made these icons available for you to incorporate them into your products under the Apache License Version 2.0. Feel free to remix and re-share these icons and documentation in your products..."
+
+&nbsp;
 
 
 ### URLs and people I found helpful or was inspired by

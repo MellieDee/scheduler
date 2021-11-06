@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1;
   background-color: #2D2432;
   color: #F3F8FA;
@@ -27,12 +27,21 @@ textarea{
   padding: 10px;
 }
 
+.display-3 {
+  font-size: 3rem;
+  font-weight: 250;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.15em ;
+}
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid #5FB9B0;
+  border-bottom: 5px solid #5FB9B0;
   padding-bottom: 1em;
 }
 
@@ -43,6 +52,10 @@ textarea{
   /* font-size: 1.2em; */
 }
 
+.form-control {
+  font-size: 1.1em;
+}
+
 .time-block{
   text-align: center;
   border-radius: 10px;
@@ -50,7 +63,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 70px;
   margin: 0 4em;
   border-top: 1px solid #F3F8FA;
 }
@@ -59,12 +72,16 @@ textarea{
   background-color: #F3F8FA;
   color: #000000;
   border-top: 1px solid #000000;
+  font-size: 1.2em;
   text-align: center;
   padding-top: 1.5em;
 }
 
+.btnDiv {
+  background-color: #355aab;
+}
 .saveBtn {
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
   /* border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; */
   background-color: #355aab;
@@ -72,27 +89,55 @@ textarea{
 }
 
 .saveBtn:hover {
-  font-size: 20px;
-  /* transition: all .8s ease-in-out; */
+  font-size: 30px;
+  transition: all;
+  /* 1s linear;  */
 }
 
-@media screen {
-  
+
+
+/*** MEDIA QUERIES  ***/
+
+
+/****   576px and smaller ******/
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 20px;
+  }
+  textarea {
+    font-size: 16px;
+  }
+  .jumbotron {
+    border-bottom: 8px solid #5FB9B0;
+
+  }
+  .row {
+    height: 70px;
+  }
+  .hour, .form-control {
+    font-size: 0.9em;
+  }
+  .hour {
+    padding: 15px;
+  }
 }
 
-/*** reference code not used ***
- border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px; #06AED5
 
-.past {
-  background-color: #d3d3d3;
-  color: black;
+/*** MQ FOR SMALLER SCREENS  and LARGER TABLETS,  LAPTOPS  DESKTOPS  ***/
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 22px;
+  }
+  textarea {
+    font-size: 20px;
+  }
+  .display-3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .row {
+    height: 80px;
+  }
 }
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-.future {
-  background-color: #77dd77;
-  color: white;
-} ***/
+
