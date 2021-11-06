@@ -28,25 +28,24 @@ Link to the quiz here *[Work Day Scheduler](https://melliedee.github.io/schedule
 - HTML
 - CSS
 - JS
-- Luxon library for dealing with dates and times in JavaScript
+- moment.js library for dealing with dates and times in JavaScript
+- template literals - note - potentially not supported in Internet Explorer
 
 
 
-### URLs I found helpful
+### URLs and people I found helpful or was inspired by
 ***
 
-https://github.com/lbmoody/simple-day-planner
+Serena Chandler - tutor for discussion of localStorage & template literals
 
-https://github.com/gabepettus/DayPlanner
 https://github.com/Giselesoubeiga/Day-Planner/blob/master/script.js
 
 https://colorhunt.co/palette/2b1f31413d655fb9b0bef992
 https://colorhunt.co/palette/151515301b3f3c415cb4a5a5
 
-**
 https://www.geeksforgeeks.org/how-to-add-and-remove-multiple-classes-in-jquery/
 
-**https://stackoverflow.com/questions/6205258/jquery-dynamically-create-button-and-attach-event-handler
+https://stackoverflow.com/questions/6205258/jquery-dynamically-create-button-and-attach-event-handler
 
 https://pretagteam.com/question/how-can-we-dynamically-change-font-color-in-textarea-using-angularjqueryjavascript
 
