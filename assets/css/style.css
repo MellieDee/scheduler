@@ -16,6 +16,9 @@ body {
 h1, p {
   color: #F3F8FA;
 }
+header p {
+padding: 0.4em;
+}
 
 textarea{
   background: transparent;
@@ -36,6 +39,7 @@ textarea{
 .lead {
   font-size: 1.1em ;
 }
+
 
 .jumbotron {
   text-align: center;
@@ -61,7 +65,7 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 10px;
-}
+} 
 
 .row {
   white-space: pre-wrap;
@@ -88,7 +92,7 @@ textarea{
   /* border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; */
   background-color: #355aab;
-  color: white;
+  color: #D6E1E6;
 }
 
 .saveBtn:hover {
@@ -98,6 +102,11 @@ textarea{
   /* 1s linear;  */
 }
 
+
+#currentDay {
+  border: 0.3px solid #BEF992;
+  margin: 0 4em;
+}
 
 
 /*** MEDIA QUERIES START ***/

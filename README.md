@@ -4,7 +4,7 @@
 
 ## Purpose
 ***
-To develop a workday planner with daily schedule that will run in the browswer and have a clean responsive and intuitive user interface. user can save events for each hour of the day
+To develop a workday planner with daily schedule where user can save events for each hour of the work day. It will run in the browswer and have a clean responsive and intuitive user interface. 
 
 
 ## Desired
