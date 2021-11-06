@@ -29,7 +29,7 @@ for (var i = 8.00; i <= 18.00; i++) {
   eventTextArea = $(`<textarea class="col-8 form-control textarea description" id="eventTextArea${i}"></textarea>`);
   // console.log(eventTextArea);
   $("textarea").focus(function () {
-    $("textarea").css("color", "white");
+    $("textarea").css("color", "black");
   });
 
   //dynamically create Save Button add click listener to save events
@@ -49,14 +49,6 @@ for (var i = 8.00; i <= 18.00; i++) {
   // checkCurrentTime();
 };
 
-/*****    Check if  time slots === current time  ****/
-// // //   create array with hours in it
-// // //   in backgroud - loop through hours to test 
-// // //     test at interval? every hour? minute? Second?
-
-// // //   1) if equal, then bg: current: #BEF992
-// // //   2) else if before bg: Past: #E8DFDF or #EAE9E9
-// // //   3) else: if after bg: Future: 5FB9B0
 
 
 //To see if current time matches the time and event is scheduled
@@ -69,26 +61,29 @@ function checkCurrentTime() {
   // if the value of hourEl is ===  if value of hour.id >8
 
 
+/*****    Check if  time slots === current time  ****/
+// // //   create array with hours in it
+// // //   in backgroud - loop through hours to test 
+// // //     test at interval? every hour? minute? Second?
 
+// // //   1) if equal, then bg: current: #BEF992
+// // //   2) else if before bg: Past: #E8DFDF or #EAE9E9
+// // //   3) else: if after bg: Future: 5FB9B0
 
-
-
-
-  
   //check each hour against current time
   for (var i = 8; i <= 18; i++) {
     console.log(i)
     if (currentTime == i) {
       console.log("happening Now");
-      // $("eventTextArea${i}").css("background", "red");
-      // $("#eventTextArea${i}").css("background-color", "#BEF992")
-      // $("eventTextArea${i}").css("background", "#BEF992");
+      $(`#eventTextArea${i}`).css("background-color", "#BEF992");
     } else if (currentTime > i) {
       console.log("already happened");
-       $("#eventTextArea${i}").css("background-color", "#5FB9B0")
+      $(`#eventTextArea${i}`).css("background-color", "#b5b1b1");
     }
     else {
+     // 3) else: if after the current time bg is 
       console.log("event coming up");
+      $(`#eventTextArea${i}`).css("background-color", "#5FB9B0");
     }
   }
 }
@@ -96,90 +91,96 @@ function checkCurrentTime() {
 
 
 //LOAD SAVED EVENTS  
-let event8 = localStorage.getItem("8");
-// console.log(event8);
-$("#eventTextArea8").val(event8);
+for (var i = 8; i <= 18; i++) {
+  let event = localStorage.getItem(i);
+console.log(event);
+$(`#eventTextArea${i}`).val(event);
+};
 
-let event9 = localStorage.getItem("9");
-// console.log(event9);
-$("#eventTextArea9").val(event9);
+// let event8 = localStorage.getItem("8");
+// // console.log(event8);
+// $("#eventTextArea8").val(event8);
 
-let event10 = localStorage.getItem("10");
-// console.log(event10);
-$("#eventTextArea10").val(event10);
+// let event9 = localStorage.getItem("9");
+// // console.log(event9);
+// $("#eventTextArea9").val(event9);
 
-let event11 = localStorage.getItem("11");
-// console.log(event11);
-$("#eventTextArea11").val(event11);
+// let event10 = localStorage.getItem("10");
+// // console.log(event10);
+// $("#eventTextArea10").val(event10);
 
-let event12 = localStorage.getItem("12");
-// console.log(event12);
-$("#eventTextArea12").val(event12);
+// let event11 = localStorage.getItem("11");
+// // console.log(event11);
+// $("#eventTextArea11").val(event11);
 
-let event13 = localStorage.getItem("13");
-// console.log(event13);
-$("#eventTextArea13").val(event13);
+// let event12 = localStorage.getItem("12");
+// // console.log(event12);
+// $("#eventTextArea12").val(event12);
 
-let event14 = localStorage.getItem("14");
-// console.log(event14);
-$("#eventTextArea14").val(event14);
+// let event13 = localStorage.getItem("13");
+// // console.log(event13);
+// $("#eventTextArea13").val(event13);
 
-let event15 = localStorage.getItem("15");
-// console.log(event15);
-$("#eventTextArea15").val(event15);
+// let event14 = localStorage.getItem("14");
+// // console.log(event14);
+// $("#eventTextArea14").val(event14);
 
-let event16 = localStorage.getItem("16");
-// console.log(event16);
-$("#eventTextArea16").val(event16);
+// let event15 = localStorage.getItem("15");
+// // console.log(event15);
+// $("#eventTextArea15").val(event15);
 
-let event17 = localStorage.getItem("17");
-// console.log(event17);
-$("#eventTextArea17").val(event17);
+// let event16 = localStorage.getItem("16");
+// // console.log(event16);
+// $("#eventTextArea16").val(event16);
 
-let event18 = localStorage.getItem("18");
-// console.log(event18);
-$("#eventTextArea18").val(event18);
+// let event17 = localStorage.getItem("17");
+// // console.log(event17);
+// $("#eventTextArea17").val(event17);
 
-//load events for the first time
-// loadEvents();
-// add to an array or loop??
-//  let events = []
-// save events in array
-// events.push ({
-//   text: "test",
-// });console.log(events);
+// let event18 = localStorage.getItem("18");
+// // console.log(event18);
+// $("#eventTextArea18").val(event18);
 
-
-
-// /****  STILL TO DO  *****/
-
-// //COLOR CHANGE EVENT Backgrounds ****/
-// //1) Compare hour at i with current time
-// //2) set if within then
-// //set if < and  > else if & else
-
-// // var auditTask = function(taskEl) {
-// //   // get date from task element
-// //   var date = $(taskEl)
-// //     .find("span")
-// //     .text()
-// //     .trim();
-
-// //   // convert to moment object at 5:00pm
-// //   var time = moment(date, "L").set("hour", 17);
+// //load events for the first time
+// // loadEvents();
+// // add to an array or loop??
+// //  let events = []
+// // save events in array
+// // events.push ({
+// //   text: "test",
+// // });console.log(events);
 
 
-// //let events = []
 
-// //     // save in events in  array
-// //    events.push({
-// //       text: eventText 
-// //       hour: eventTime  hourEL?? hourEL text??
-// //     });
+// // /****  STILL TO DO  *****/
 
-// //     saveEvents();
-// //   }
-// // });
+// // //COLOR CHANGE EVENT Backgrounds ****/
+// // //1) Compare hour at i with current time
+// // //2) set if within then
+// // //set if < and  > else if & else
+
+// // // var auditTask = function(taskEl) {
+// // //   // get date from task element
+// // //   var date = $(taskEl)
+// // //     .find("span")
+// // //     .text()
+// // //     .trim();
+
+// // //   // convert to moment object at 5:00pm
+// // //   var time = moment(date, "L").set("hour", 17);
+
+
+// // //let events = []
+
+// // //     // save in events in  array
+// // //    events.push({
+// // //       text: eventText 
+// // //       hour: eventTime  hourEL?? hourEL text??
+// // //     });
+
+// // //     saveEvents();
+// // //   }
+// // // });
 
 
 // // // // 4) Check if  time slots === current time
