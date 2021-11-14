@@ -19,7 +19,7 @@ To develop a workday planner with daily schedule where user can save events for 
 
 ## Scheduler URL
 ***
-Link to the quiz here *[Work Day Scheduler](https://melliedee.github.io/scheduler/)*.
+Link here *[Work Day Scheduler](https://melliedee.github.io/scheduler/)*.
 
 &nbsp;
 
